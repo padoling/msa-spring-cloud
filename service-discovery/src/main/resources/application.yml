@@ -1,0 +1,15 @@
+server:
+  port: 8761
+
+# 스프링에서 각 마이크로서비스에 부여하는 고유한 이름
+spring:
+  application:
+    name: discoveryservice
+
+# 유레카 라이브러리를 포함하면 기본적으로 유레카 클라이언트로서 어딘가에 등록하려는 시도를 함
+# 아래 정보들은 기본값이 true로 자신의 정보를 자신에게 등록하는 의미 없는 동작을 하게 됨
+# 유레카 서버 자체는 기동을 하되 자신의 정보를 다른 외부 서비스에게 주고받는 역할을 할 필요가 없음
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
